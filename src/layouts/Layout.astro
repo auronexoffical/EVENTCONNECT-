@@ -26,39 +26,71 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://eventcon
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={`${title} | EventConnect+`} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${title} | EventConnect+`} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
     <title>{title} | EventConnect+</title>
   </head>
+
   <body class="bg-surface-950 text-white antialiased overflow-x-hidden">
     <Navbar />
-    <main><slot /></main>
+    <main>
+      <slot />
+    </main>
     <Footer />
+
+    <!-- Scroll animation observer -->
     <script>
       const observer = new IntersectionObserver(
-        (entries) => { entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); }); },
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+            }
+          });
+        },
         { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
       );
-      document.querySelectorAll('.fade-in-section').forEach((el) => observer.observe(el));
+
+      document.querySelectorAll('.fade-in-section').forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Navbar scroll effect
       const navbar = document.getElementById('navbar');
       if (navbar) {
         window.addEventListener('scroll', () => {
-          if (window.scrollY > 60) navbar.classList.add('nav-scrolled');
-          else navbar.classList.remove('nav-scrolled');
+          if (window.scrollY > 60) {
+            navbar.classList.add('nav-scrolled');
+          } else {
+            navbar.classList.remove('nav-scrolled');
+          }
         }, { passive: true });
       }
     </script>
+
     <style is:global>
       #navbar.nav-scrolled {
         background: rgba(15, 9, 26, 0.95) !important;

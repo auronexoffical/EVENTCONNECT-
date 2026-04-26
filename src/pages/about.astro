@@ -1,0 +1,209 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About"
+  description="EventConnect+ is India's First Dedicated Guest Management Company — designing and managing the complete guest journey for destination weddings, corporate events, and large-scale gatherings."
+>
+
+  <!-- ══════════════════════════════════════ HERO ══ -->
+  <section class="relative min-h-[70vh] flex items-end overflow-hidden bg-surface-950 pt-20">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-[-5%] right-[10%] w-[500px] h-[500px] rounded-full bg-brand-700 opacity-15 blur-[110px] animate-float-slow"></div>
+      <div class="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] rounded-full bg-brand-500 opacity-10 blur-[90px] animate-float-med"></div>
+    </div>
+    <div class="absolute inset-0 pointer-events-none opacity-[0.025]"
+      style="background-image: linear-gradient(rgba(155,0,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(155,0,255,1) 1px, transparent 1px); background-size: 80px 80px;">
+    </div>
+
+    <div class="relative z-10 container-inner pb-24 pt-16">
+      <div class="max-w-3xl">
+        <p class="label-text mb-5 fade-in-section">About EventConnect+</p>
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-medium text-white leading-[1.05] tracking-tight mb-8 fade-in-section fade-in-delay-1">
+          We Design the Experience<br/>
+          <span class="text-gradient">Behind the Experience</span>
+        </h1>
+        <p class="font-sans text-lg text-surface-400 leading-relaxed max-w-2xl fade-in-section fade-in-delay-2">
+          EventConnect+ is a Guest Experience, Hospitality, and Logistics Management company delivering structured, end-to-end guest journeys for destination weddings, corporate events, and large-scale gatherings.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ MISSION BLOCK ══ -->
+  <section class="section-padding bg-surface-950 border-t border-surface-900">
+    <div class="container-inner">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+        <div class="lg:col-span-5 fade-in-section">
+          <div class="card-glass rounded-2xl p-10 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500 opacity-10 rounded-bl-full blur-2xl pointer-events-none"></div>
+            <p class="label-text mb-5">Our Purpose</p>
+            <blockquote class="font-display text-2xl lg:text-3xl text-white font-medium leading-snug italic">
+              "We operate as a dedicated guest experience layer within an event — planning, coordinating, and executing every movement, interaction, and touchpoint with precision."
+            </blockquote>
+            <div class="mt-8 pt-6 border-t border-surface-800 flex items-center gap-3">
+              <div class="w-1.5 h-8 bg-brand-gradient rounded-full"></div>
+              <p class="font-sans text-sm text-surface-500">Engineered experiences that feel effortless to guests, fully controlled behind the scenes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6 fade-in-section fade-in-delay-2">
+          <p class="font-sans text-surface-300 text-lg leading-relaxed">
+            We operate as a dedicated guest experience layer within an event — planning, coordinating, and executing every movement, interaction, and touchpoint with precision.
+          </p>
+          <p class="font-sans text-surface-500 leading-relaxed">
+            From arrivals to departures, we engineer experiences that feel effortless to guests and fully controlled behind the scenes. While the creative team designs the celebration, we design the systems that make it seamless.
+          </p>
+          <p class="font-sans text-surface-500 leading-relaxed">
+            We don't deploy manpower. We design systems, lead teams, and take full ownership of guest experience execution.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ WHAT WE DO ══ -->
+  <section class="section-padding bg-surface-900/40">
+    <div class="container-inner">
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+        <div class="fade-in-section">
+          <p class="label-text mb-4">Scope of Work</p>
+          <h2 class="font-display text-4xl lg:text-5xl font-medium text-white leading-tight mb-6">
+            We Manage How Guests<br/>Experience an Event
+          </h2>
+          <div class="w-10 h-0.5 bg-brand-gradient mb-6"></div>
+          <p class="font-sans text-surface-400 leading-relaxed mb-8">
+            While creative teams design the celebration,<br/>
+            <span class="text-surface-300 font-medium">we design the systems that make it seamless.</span>
+          </p>
+          <a href="/services" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-gradient rounded-lg text-white font-sans text-sm font-semibold shadow-lg shadow-brand-700/30 hover:scale-105 hover:shadow-brand-500/40 transition-all duration-300">
+            View All Services
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 3l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="fade-in-section fade-in-delay-2">
+          <ul class="space-y-4">
+            {[
+              'Guest communication systems',
+              'RSVP & guest data management',
+              'Travel & movement coordination',
+              'Hospitality operations',
+              'On-ground guest assistance',
+              'Real-time logistics control',
+              'Airport operations & transfers',
+              'Destination management',
+            ].map(item => (
+              <li class="flex items-center gap-4 py-3 border-b border-surface-800/50 group">
+                <div class="w-6 h-6 rounded-full bg-brand-700/20 border border-brand-700/40 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-700/30 transition-colors">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="#9B00FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span class="font-sans text-surface-300 text-sm group-hover:text-white transition-colors">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════════════════════ AUTHORITY ══ -->
+  <section class="section-padding bg-surface-950 relative overflow-hidden">
+    <div class="absolute inset-0 bg-brand-gradient opacity-[0.05] pointer-events-none"></div>
+    <div class="container-inner relative z-10">
+
+      <div class="text-center mb-16 fade-in-section">
+        <p class="label-text mb-4">Our Track Record</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-medium text-white">Category Leadership,<br/>Proven at Scale</h2>
+      </div>
+
+      <!-- Stats grid -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+        {[
+          { stat: '10,000+', label: 'Guests Managed', sub: 'Across India and abroad' },
+          { stat: '30+',     label: 'Events Delivered', sub: 'Weddings, corporates, gatherings' },
+          { stat: '10+',     label: 'Destinations', sub: 'Multi-city execution expertise' },
+          { stat: '#1',      label: 'In Category', sub: 'India\'s First Guest Mgmt Company' },
+        ].map((item, i) => (
+          <div class={`card-glass rounded-2xl p-7 text-center fade-in-section`} style={`transition-delay:${i*0.1}s`}>
+            <span class="font-display text-4xl lg:text-5xl font-semibold text-gradient block mb-2">{item.stat}</span>
+            <span class="font-sans text-sm font-medium text-white block mb-1">{item.label}</span>
+            <span class="font-sans text-xs text-surface-600">{item.sub}</span>
+          </div>
+        ))}
+      </div>
+
+      <!-- Authority statement -->
+      <div class="max-w-2xl mx-auto text-center fade-in-section">
+        <div class="inline-flex flex-col sm:flex-row items-center gap-4 px-8 py-5 rounded-2xl border border-gold-500/25 bg-gold-500/5">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="10,2 12.5,7.5 18.5,8.2 14,12.5 15.3,18.5 10,15.5 4.7,18.5 6,12.5 1.5,8.2 7.5,7.5" fill="#d4a017"/></svg>
+          <div class="text-center sm:text-left">
+            <p class="font-sans text-xs uppercase tracking-[0.2em] text-gold-700 mb-0.5">Established Category Leader</p>
+            <p class="font-sans text-sm font-semibold text-gold-400">India's First Dedicated Guest Management Company</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ WHO WE SERVE ══ -->
+  <section class="section-padding bg-surface-900/40">
+    <div class="container-inner">
+      <div class="text-center mb-14 fade-in-section">
+        <p class="label-text mb-4">Our Clients</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-medium text-white">Who We Work With</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          {
+            title: 'Destination Weddings',
+            desc: 'Multi-day, multi-venue destination weddings with international guests, complex travel, and multi-hotel logistics across India and abroad.',
+            tag: 'HNI & NRI Weddings',
+          },
+          {
+            title: 'Corporate Events',
+            desc: 'Large-scale conferences, leadership summits, product launches, and incentive trips demanding precision logistics and seamless executive experiences.',
+            tag: 'Enterprise & SME',
+          },
+          {
+            title: 'Large-Scale Gatherings',
+            desc: 'High-guest-count celebrations, gala dinners, multi-day festivals, and cultural events requiring structured movement and hospitality management.',
+            tag: 'Social & Cultural',
+          },
+        ].map((item, i) => (
+          <div class={`card-glass rounded-2xl p-8 group hover:border-brand-700/40 hover:scale-[1.01] transition-all duration-300 fade-in-section`} style={`transition-delay:${i*0.15}s`}>
+            <span class="label-text text-brand-500 mb-4 block">{item.tag}</span>
+            <h3 class="font-display text-2xl font-medium text-white mb-4">{item.title}</h3>
+            <p class="font-sans text-sm text-surface-500 leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CTA ══ -->
+  <section class="section-padding bg-surface-950 relative overflow-hidden">
+    <div class="absolute inset-0 bg-brand-gradient opacity-[0.05] pointer-events-none"></div>
+    <div class="container-inner relative z-10 text-center">
+      <div class="max-w-2xl mx-auto fade-in-section">
+        <p class="label-text mb-6">Let's Work Together</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-medium text-white mb-6">Ready to Engineer Your Guest Experience?</h2>
+        <p class="font-sans text-surface-400 mb-10">Connect with our team to discuss your event and how EventConnect+ can build the operational layer behind it.</p>
+        <a href="/contact" class="inline-flex items-center gap-2.5 px-8 py-4 bg-brand-gradient rounded-xl text-white font-sans font-semibold shadow-xl shadow-brand-700/30 hover:shadow-brand-500/50 hover:scale-105 transition-all duration-300">
+          Start the Conversation
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8h14M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

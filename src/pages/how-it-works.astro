@@ -1,0 +1,213 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const steps = [
+  {
+    number: '01',
+    title: 'Understanding the Event',
+    subtitle: 'Discovery & briefing',
+    description: 'We begin with a deep-dive briefing to understand the full scope of your event — the guest profile, event format, destinations, scale, timeline, and non-negotiables. This is where we identify the complexity and build a shared vision for the guest experience.',
+    details: [
+      'Event type, scale, and format assessment',
+      'Guest profile and demographic analysis',
+      'Venue and destination evaluation',
+      'Timeline and milestone mapping',
+      'Stakeholder expectations alignment',
+      'Budget and scope definition',
+    ],
+    outcome: 'A clear brief and shared understanding of what success looks like.',
+  },
+  {
+    number: '02',
+    title: 'System Design',
+    subtitle: 'Architecture & planning',
+    description: 'Based on the brief, we design the complete guest experience system — the communication architecture, hospitality framework, logistics plan, and on-ground team structure. Every element is mapped to the guest journey before a single thing is executed.',
+    details: [
+      'Guest journey mapping (end-to-end)',
+      'Communication plan design',
+      'Hospitality and accommodation framework',
+      'Transport and logistics architecture',
+      'Team structure and command chart',
+      'Technology and tools setup',
+    ],
+    outcome: 'A comprehensive Guest Experience Blueprint ready for execution.',
+  },
+  {
+    number: '03',
+    title: 'Pre-Event Setup',
+    subtitle: 'Configuration & coordination',
+    description: 'Weeks before the event, we execute all the pre-event groundwork — RSVP management, room allocations, transport bookings, team onboarding, vendor briefings, and communication deployment. Nothing is left to the last minute.',
+    details: [
+      'RSVP management and guest data collation',
+      'Hotel room allocations and confirmations',
+      'Transport and fleet bookings',
+      'Vendor briefing and coordination',
+      'On-ground team onboarding and training',
+      'Pre-event communication execution',
+    ],
+    outcome: 'A fully prepared, briefed, and ready-to-execute operation.',
+  },
+  {
+    number: '04',
+    title: 'Execution',
+    subtitle: 'On-ground command',
+    description: 'On event day (or days), we deploy our full team with a clear command structure, real-time communication protocols, and predefined contingency plans. The guest experience runs as designed — precisely, calmly, and completely in control.',
+    details: [
+      'Airport and arrival management',
+      'Hotel operations coordination',
+      'Live transport and movement control',
+      'On-ground guest management',
+      'Real-time command centre operations',
+      'Issue resolution and escalation management',
+    ],
+    outcome: 'A seamless event where every guest feels taken care of.',
+  },
+  {
+    number: '05',
+    title: 'Closure',
+    subtitle: 'Wind-down & debrief',
+    description: 'After the event, we manage the complete closure — departure operations, final reconciliations, team de-briefing, and a structured post-event report covering what worked, what we learned, and how we\'ll be even better next time.',
+    details: [
+      'Departure operations management',
+      'Hotel and vendor final settlements',
+      'Guest feedback collation',
+      'Team debrief and retrospective',
+      'Post-event experience report',
+      'Final documentation handover',
+    ],
+    outcome: 'A clean closure and a documented record of the guest experience.',
+  },
+];
+---
+
+<Layout
+  title="How It Works"
+  description="EventConnect+ follows a structured 5-step process: Understanding, System Design, Pre-Event Setup, Execution, and Closure — ensuring every event is engineered, not improvised."
+>
+
+  <!-- ═══════════ HERO ══ -->
+  <section class="relative pt-40 pb-20 overflow-hidden bg-surface-950">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 right-[15%] w-[500px] h-[400px] rounded-full bg-brand-700 opacity-12 blur-[110px] animate-float-slow"></div>
+      <div class="absolute bottom-0 left-[5%] w-[350px] h-[350px] rounded-full bg-brand-500 opacity-10 blur-[80px] animate-float-med"></div>
+    </div>
+    <div class="container-inner relative z-10 text-center">
+      <p class="label-text mb-5 fade-in-section">Our Process</p>
+      <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-medium text-white leading-[1.05] tracking-tight mb-6 fade-in-section fade-in-delay-1">
+        Engineered,<br/><span class="text-gradient">Not Improvised.</span>
+      </h1>
+      <p class="font-sans text-lg text-surface-400 max-w-xl mx-auto leading-relaxed fade-in-section fade-in-delay-2">
+        A structured five-phase process that transforms event requirements into a precision-executed guest experience.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════ PROCESS OVERVIEW STRIP ══ -->
+  <section class="bg-surface-900 border-y border-surface-800">
+    <div class="container-inner py-8">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-0 overflow-x-auto fade-in-section">
+        {steps.map((step, i) => (
+          <>
+            <div class="flex flex-col items-center px-6 py-2">
+              <span class="font-sans text-xs font-bold text-brand-500 tracking-widest mb-1">{step.number}</span>
+              <span class="font-sans text-sm font-medium text-white whitespace-nowrap">{step.title}</span>
+            </div>
+            {i < steps.length - 1 && (
+              <div class="w-12 h-px bg-gradient-to-r from-brand-700/50 to-brand-500/50 hidden sm:block flex-shrink-0"></div>
+            )}
+          </>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ STEPS DETAIL ══ -->
+  <section class="bg-surface-950 py-20 lg:py-28">
+    <div class="container-inner">
+      <div class="space-y-4">
+
+        {steps.map((step, i) => (
+          <div class={`card-glass rounded-2xl overflow-hidden group hover:border-brand-700/35 transition-all duration-300 fade-in-section`} style={`transition-delay:${i*0.07}s`}>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+
+              <!-- Step number sidebar -->
+              <div class="lg:col-span-2 bg-brand-gradient-subtle border-b lg:border-b-0 lg:border-r border-brand-700/15 p-8 lg:p-10 flex lg:flex-col items-center lg:items-start gap-4 lg:gap-3">
+                <div class="w-12 h-12 rounded-xl bg-brand-gradient flex items-center justify-center shadow-lg shadow-brand-700/30 flex-shrink-0">
+                  <span class="font-sans text-sm font-bold text-white">{step.number}</span>
+                </div>
+                <div>
+                  <p class="font-sans text-xs uppercase tracking-widest text-surface-600 mb-0.5">{step.subtitle}</p>
+                  <h2 class="font-display text-xl lg:text-2xl font-medium text-white">{step.title}</h2>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="lg:col-span-10 p-8 lg:p-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+
+                  <div>
+                    <p class="font-sans text-surface-300 leading-relaxed mb-6">{step.description}</p>
+                    <!-- Outcome highlight -->
+                    <div class="flex items-start gap-3 p-4 rounded-xl bg-brand-700/10 border border-brand-700/20">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="text-brand-400 flex-shrink-0 mt-0.5"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      <p class="font-sans text-sm text-brand-300 italic">{step.outcome}</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p class="font-sans text-xs uppercase tracking-widest text-surface-700 mb-4">Key Activities</p>
+                    <ul class="space-y-2.5">
+                      {step.details.map(detail => (
+                        <li class="flex items-start gap-3">
+                          <div class="w-1.5 h-1.5 rounded-full bg-brand-500 flex-shrink-0 mt-1.5"></div>
+                          <span class="font-sans text-sm text-surface-400">{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ PRINCIPLE STRIP ══ -->
+  <section class="bg-surface-900/50 border-y border-surface-800">
+    <div class="container-inner py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        {[
+          { label: 'Engineered', value: 'Every action planned before execution — no improvisation on the floor.' },
+          { label: 'Accountable', value: 'One team owns the guest experience end-to-end. No fragmented responsibility.' },
+          { label: 'Controlled', value: 'Real-time visibility and command over every moving part of the event.' },
+        ].map((item, i) => (
+          <div class={`fade-in-section`} style={`transition-delay:${i*0.15}s`}>
+            <p class="font-display text-2xl text-gradient font-medium mb-2">{item.label}</p>
+            <p class="font-sans text-sm text-surface-500 leading-relaxed">{item.value}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CTA ══ -->
+  <section class="section-padding bg-surface-950 relative overflow-hidden">
+    <div class="absolute inset-0 bg-brand-gradient opacity-[0.05] pointer-events-none"></div>
+    <div class="container-inner relative z-10 text-center">
+      <div class="max-w-xl mx-auto fade-in-section">
+        <p class="label-text mb-5">Start the Process</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-medium text-white mb-6">Ready to Begin?</h2>
+        <p class="font-sans text-surface-400 mb-10">Tell us about your event and we'll take it from step one.</p>
+        <a href="/contact" class="inline-flex items-center gap-2.5 px-8 py-4 bg-brand-gradient rounded-xl text-white font-sans font-semibold shadow-xl shadow-brand-700/30 hover:shadow-brand-500/50 hover:scale-105 transition-all duration-300">
+          Start Planning Your Event
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8h14M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

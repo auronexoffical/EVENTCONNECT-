@@ -1,0 +1,256 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const caseStudies = [
+  {
+    id: '001',
+    tag: 'Destination Wedding',
+    title: 'Multi-Day Royal Wedding, Rajasthan',
+    location: 'Udaipur, Rajasthan',
+    guestCount: '450+ guests',
+    duration: '5 days',
+    scope: [
+      'Complete airport operations across 3 cities',
+      'Multi-hotel hospitality management (4 properties)',
+      'Fleet coordination for 80+ vehicles',
+      'Guest communication from 6 weeks pre-event',
+      'Full on-ground team of 35 professionals',
+    ],
+    challenge: 'Guests arriving from 12 international cities across 3 Indian airports, with complex multi-venue movement across Udaipur over 5 days.',
+    outcome: 'Zero flight-to-venue delays. 100% guest accountability at all times. Client rated it the smoothest large wedding their guests had ever attended.',
+    metrics: ['450+ guests', '3 airports', '5 days', '12 nationalities'],
+    gradient: 'from-brand-900/50 to-surface-900',
+  },
+  {
+    id: '002',
+    tag: 'Corporate Event',
+    title: 'Leadership Summit — Pan-India Rollout',
+    location: 'Mumbai & Delhi',
+    guestCount: '300 delegates',
+    duration: '3 days',
+    scope: [
+      'Delegate travel management from 22 cities',
+      'Multi-hotel room block management',
+      'Airport operations at 2 major hubs',
+      'Summit-day on-ground operations',
+      'VIP protocol for C-suite attendees',
+    ],
+    challenge: 'Senior leadership and delegates arriving from 22 cities with varying flight schedules, tight hotel check-in windows, and a precise summit timeline.',
+    outcome: 'All 300 delegates checked in within schedule. Zero protocol breaches for VIP guests. Client extended scope to all future annual summits.',
+    metrics: ['300 delegates', '22 cities', '2 venues', 'C-suite VIP'],
+    gradient: 'from-brand-800/30 to-surface-900',
+  },
+  {
+    id: '003',
+    tag: 'Destination Wedding',
+    title: 'NRI Wedding — Destination Goa',
+    location: 'North Goa',
+    guestCount: '200 guests',
+    duration: '4 days',
+    scope: [
+      'International guest communication system',
+      'Single-hotel hospitality management',
+      'Beach venue guest flow management',
+      'Airport arrivals across 4 days',
+      'Curated destination experience programming',
+    ],
+    challenge: 'International guests from the UK, US, and UAE with no prior India event experience, requiring comprehensive pre-arrival communication and on-ground support.',
+    outcome: 'International guests reported it as the most organised Indian event they\'d attended. Zero guest confusion or missed transfers across 4 days.',
+    metrics: ['200 guests', '3 countries', '4 days', 'International'],
+    gradient: 'from-brand-700/20 to-surface-900',
+  },
+  {
+    id: '004',
+    tag: 'Corporate Incentive',
+    title: 'Global Incentive Trip — International Destination',
+    location: 'Dubai, UAE',
+    guestCount: '120 employees',
+    duration: '3 days',
+    scope: [
+      'India-to-Dubai departure management',
+      'Full hospitality management at luxury resort',
+      'Activity and excursion coordination',
+      'Group dining and F&B management',
+      'Return departure coordination',
+    ],
+    challenge: 'First international incentive trip for the company, with employees from 8 Indian cities requiring coordinated international travel and a luxury hospitality experience.',
+    outcome: 'Seamless 3-day international group trip. Employee satisfaction scores highest-ever for a company event. Client replicated the model for the next year.',
+    metrics: ['120 employees', '8 cities', 'Dubai', '3 days'],
+    gradient: 'from-brand-900/40 to-surface-900',
+  },
+  {
+    id: '005',
+    tag: 'Social Gathering',
+    title: 'Large-Scale Family Celebration, Mumbai',
+    location: 'Mumbai, Maharashtra',
+    guestCount: '600+ guests',
+    duration: '2 days',
+    scope: [
+      'Single-day high-volume guest flow management',
+      'Valet and parking management',
+      'Multi-zone on-ground team deployment',
+      'Guest communication and RSVP management',
+      'Catering coordination and seating management',
+    ],
+    challenge: '600+ guests across a single-day event at a large Mumbai venue, requiring structured movement, controlled entry, and managed guest experience throughout.',
+    outcome: 'Zero congestion at entry. Smooth guest distribution across all zones. Host family received unanimous praise for a well-run, calm, and organised event.',
+    metrics: ['600+ guests', '1 venue', '8 zones', 'Single day'],
+    gradient: 'from-brand-700/15 to-surface-900',
+  },
+  {
+    id: '006',
+    tag: 'Destination Wedding',
+    title: 'Heritage Wedding — Jim Corbett',
+    location: 'Jim Corbett, Uttarakhand',
+    guestCount: '180 guests',
+    duration: '3 days',
+    scope: [
+      'Remote destination logistics management',
+      'Guest travel coordination from 5 cities',
+      'Jungle resort hospitality management',
+      'Nature experience and activity coordination',
+      'End-to-end communication and briefing',
+    ],
+    challenge: 'A remote jungle destination with limited mobile connectivity, complex terrain, and guests travelling from 5 different cities with varying arrival windows.',
+    outcome: 'All 180 guests arrived safely and on schedule. Destination experience seamlessly integrated. Connectivity challenges handled through pre-planned offline protocols.',
+    metrics: ['180 guests', '5 cities', 'Remote', '3 days'],
+    gradient: 'from-brand-800/25 to-surface-900',
+  },
+];
+---
+
+<Layout
+  title="Case Studies"
+  description="EventConnect+ has managed 10,000+ guests across 30+ events — destination weddings, corporate events, and large-scale gatherings across India and internationally."
+>
+
+  <!-- ═══════════ HERO ══ -->
+  <section class="relative pt-40 pb-20 overflow-hidden bg-surface-950">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 left-[20%] w-[500px] h-[400px] rounded-full bg-brand-700 opacity-12 blur-[120px] animate-float-slow"></div>
+    </div>
+    <div class="container-inner relative z-10 text-center">
+      <p class="label-text mb-5 fade-in-section">Our Work</p>
+      <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-medium text-white leading-[1.05] tracking-tight mb-6 fade-in-section fade-in-delay-1">
+        Events We've<br/><span class="text-gradient">Engineered</span>
+      </h1>
+      <p class="font-sans text-lg text-surface-400 max-w-xl mx-auto leading-relaxed mb-12 fade-in-section fade-in-delay-2">
+        A selection of events where EventConnect+ managed the complete guest experience — from first communication to final departure.
+      </p>
+
+      <!-- Stats strip -->
+      <div class="inline-flex flex-wrap justify-center gap-x-8 gap-y-4 px-8 py-5 rounded-2xl border border-surface-800 bg-surface-900/50 fade-in-section fade-in-delay-3">
+        {[
+          { value: '10,000+', label: 'Guests Managed' },
+          { value: '30+', label: 'Events Delivered' },
+          { value: '10+', label: 'Destinations' },
+        ].map((s, i) => (
+          <>
+            <div class="text-center">
+              <p class="font-display text-2xl font-semibold text-gradient">{s.value}</p>
+              <p class="font-sans text-xs text-surface-600">{s.label}</p>
+            </div>
+            {i < 2 && <div class="hidden sm:block w-px bg-surface-800 self-stretch"></div>}
+          </>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ CASE STUDY GRID ══ -->
+  <section class="bg-surface-950 pb-28">
+    <div class="container-inner">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        {caseStudies.map((cs, i) => (
+          <div class={`card-glass rounded-2xl overflow-hidden group hover:border-brand-700/40 hover:scale-[1.01] transition-all duration-300 fade-in-section`} style={`transition-delay:${(i%2)*0.1}s`}>
+
+            <!-- Card header -->
+            <div class={`p-8 bg-gradient-to-br ${cs.gradient} relative overflow-hidden`}>
+              <div class="absolute inset-0 pointer-events-none opacity-20"
+                style="background-image: radial-gradient(rgba(155,0,255,0.4) 1px, transparent 1px); background-size: 24px 24px;">
+              </div>
+              <div class="relative z-10">
+                <div class="flex items-center justify-between mb-5">
+                  <span class="label-text text-brand-400">{cs.tag}</span>
+                  <span class="font-sans text-xs text-surface-700 tracking-widest">#{cs.id}</span>
+                </div>
+                <h2 class="font-display text-2xl lg:text-3xl font-medium text-white mb-4 leading-snug">{cs.title}</h2>
+                <!-- Metric pills -->
+                <div class="flex flex-wrap gap-2">
+                  {cs.metrics.map(m => (
+                    <span class="px-3 py-1 rounded-full border border-brand-700/30 bg-brand-700/15 text-xs font-sans text-brand-300">{m}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <!-- Card body -->
+            <div class="p-8 space-y-6">
+
+              <!-- Location + duration -->
+              <div class="flex flex-wrap gap-4 text-xs font-sans text-surface-600">
+                <span class="flex items-center gap-1.5">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1C4.07 1 2.5 2.57 2.5 4.5c0 2.78 3.5 6.5 3.5 6.5s3.5-3.72 3.5-6.5C9.5 2.57 7.93 1 6 1z" stroke="currentColor" stroke-width="1.2"/><circle cx="6" cy="4.5" r="1.2" stroke="currentColor" stroke-width="1.2"/></svg>
+                  {cs.location}
+                </span>
+                <span class="flex items-center gap-1.5">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="4.5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.5V6l2 1.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  {cs.duration}
+                </span>
+                <span class="flex items-center gap-1.5">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M8 5a2 2 0 10-4 0 2 2 0 004 0zM2 11a4 4 0 018 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  {cs.guestCount}
+                </span>
+              </div>
+
+              <!-- Challenge -->
+              <div>
+                <p class="font-sans text-xs uppercase tracking-widest text-surface-700 mb-2">Challenge</p>
+                <p class="font-sans text-sm text-surface-500 leading-relaxed">{cs.challenge}</p>
+              </div>
+
+              <!-- Scope -->
+              <div>
+                <p class="font-sans text-xs uppercase tracking-widest text-surface-700 mb-2">Scope</p>
+                <ul class="space-y-1.5">
+                  {cs.scope.map(s => (
+                    <li class="flex items-start gap-2">
+                      <div class="w-1 h-1 rounded-full bg-brand-500 flex-shrink-0 mt-1.5"></div>
+                      <span class="font-sans text-xs text-surface-500">{s}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <!-- Outcome -->
+              <div class="p-4 rounded-xl bg-brand-700/8 border border-brand-700/20">
+                <p class="font-sans text-xs uppercase tracking-widest text-brand-600 mb-1.5">Outcome</p>
+                <p class="font-sans text-sm text-brand-300 leading-relaxed italic">{cs.outcome}</p>
+              </div>
+
+            </div>
+          </div>
+        ))}
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CTA ══ -->
+  <section class="section-padding bg-surface-900/40 border-t border-surface-800">
+    <div class="container-inner text-center">
+      <div class="max-w-2xl mx-auto fade-in-section">
+        <p class="label-text mb-5">Your Event, Next</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-medium text-white mb-5">Ready to Add Your Event to Our Portfolio?</h2>
+        <p class="font-sans text-surface-400 mb-10 leading-relaxed">Every event in our portfolio started with a conversation. Let's have yours.</p>
+        <a href="/contact" class="inline-flex items-center gap-2.5 px-8 py-4 bg-brand-gradient rounded-xl text-white font-sans font-semibold shadow-xl shadow-brand-700/30 hover:shadow-brand-500/50 hover:scale-105 transition-all duration-300">
+          Start Planning
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8h14M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    id: '01',
+    title: 'Guest Communication',
+    tagline: 'Structured, timely, and personalised communication across the entire guest lifecycle.',
+    description: 'We design and manage the complete communication architecture for your event — from the first invitation to post-event follow-through. Every message, every medium, every moment is planned to ensure guests are always informed, assured, and engaged.',
+    inclusions: [
+      'Pre-event communication calendars',
+      'Branded digital invitation and information kits',
+      'RSVP follow-up workflows',
+      'Travel and logistics briefings',
+      'On-ground communication protocols',
+      'Personalised guest messaging',
+      'Day-of coordination updates',
+    ],
+    icon: `<path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    viewBox: '0 0 24 24',
+  },
+  {
+    id: '02',
+    title: 'Guest Experience Management',
+    tagline: 'End-to-end ownership of how guests perceive, feel, and remember your event.',
+    description: 'Guest experience is not a department — it\'s a system. We design, plan, and manage every touchpoint across the guest journey, ensuring that from arrival to departure, every guest feels seen, attended to, and part of something exceptional.',
+    inclusions: [
+      'Guest journey mapping and design',
+      'Touchpoint planning and oversight',
+      'VIP and special guest protocols',
+      'Guest profiling and preference management',
+      'Real-time experience monitoring',
+      'Feedback systems and quality control',
+      'Post-event debrief and reporting',
+    ],
+    icon: `<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    viewBox: '0 0 24 24',
+  },
+  {
+    id: '03',
+    title: 'Hospitality Management',
+    tagline: 'Hotel allocations, room management, and on-property guest services — all controlled.',
+    description: 'We manage the complete hospitality infrastructure of your event — from room block negotiations and allocations to daily amenity coordination and on-property guest support. Every guest is housed correctly, cared for professionally, and managed efficiently.',
+    inclusions: [
+      'Hotel room block contracting and management',
+      'Guest room allocation and assignment',
+      'Check-in and check-out coordination',
+      'Amenity and welcome kit management',
+      'Special accommodation requirements',
+      'On-property guest relations team',
+      'F&B coordination and meal plans',
+    ],
+    icon: `<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M9 22V12h6v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+    viewBox: '0 0 24 24',
+  },
+  {
+    id: '04',
+    title: 'Logistics Management',
+    tagline: 'Fleet planning, transfer scheduling, and movement control across every venue.',
+    description: 'Logistics is where events break down. We build airtight transport and movement plans — fleet management, driver briefings, route mapping, and real-time coordination — so that guests move smoothly, on time, every time.',
+    inclusions: [
+      'Transport fleet planning and procurement',
+      'Guest transfer scheduling',
+      'Route mapping and timing plans',
+      'Driver briefing and fleet management',
+      'Real-time tracking and coordination',
+      'Contingency and delay management',
+      'Multi-venue movement choreography',
+    ],
+    icon: `<circle cx="5" cy="18" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="19" cy="18" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M1 3h15l4 9H1V3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    viewBox: '0 0 24 24',
+  },
+  {
+    id: '05',
+    title: 'Airport Operations',
+    tagline: 'Structured arrivals and departures — every flight, every face, accounted for.',
+    description: 'Airport operations are the first and last impression of your event. Our team manages the complete arrival and departure experience — from meet & greet to vehicle handover — ensuring guests transition smoothly from the moment they land.',
+    inclusions: [
+      'Flight itinerary collation and tracking',
+      'Dedicated airport meet & greet teams',
+      'Arrival lounge and holding area management',
+      'Guest identification and handover systems',
+      'Transfer to hotel and venue coordination',
+      'Departure transfers and check-in support',
+      'Group and staggered arrival management',
+    ],
+    icon: `<path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07A19.5 19.5 0 014.07 5.18 2 2 0 016.03 3h3a2 2 0 012 1.72c.13.96.39 1.9.78 2.81a2 2 0 01-.45 2.11L10.09 10.9a16 16 0 006.01 6.01l1.27-1.27a2 2 0 012.11-.45c.91.39 1.85.65 2.81.78A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    viewBox: '0 0 24 24',
+  },
+  {
+    id: '06',
+    title: 'On-Ground Operations',
+    tagline: 'A command structure on the ground — managing people, movement, and moments.',
+    description: 'On-ground execution is where plans meet reality. We deploy trained guest experience teams with a clear command structure, real-time communication, and predefined protocols to ensure the event floor runs with precision at every moment.',
+    inclusions: [
+      'On-ground guest experience team deployment',
+      'Zone-wise guest management structure',
+      'Earpiece communication systems',
+      'Real-time event command centre',
+      'Guest flow management',
+      'Issue resolution protocols',
+      'Crowd and queue management',
+    ],
+    icon: `<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+    viewBox: '0 0 24 24',
+  },
+  {
+    id: '07',
+    title: 'Departures',
+    tagline: 'Controlled, coordinated, and warm send-offs — the final impression, perfected.',
+    description: 'Departures are the most overlooked phase of any event. We manage the complete departure operation — staggered check-outs, farewell protocols, baggage management, and transfer coordination — ensuring the last experience guests have is as seamless as the first.',
+    inclusions: [
+      'Departure schedule planning and sequencing',
+      'Staggered check-out management',
+      'Farewell briefings and communication',
+      'Baggage handling coordination',
+      'Airport transfer management',
+      'Last-minute guest requirement handling',
+      'Departure experience personalisation',
+    ],
+    icon: `<path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    viewBox: '0 0 24 24',
+  },
+  {
+    id: '08',
+    title: 'Destination Management',
+    tagline: 'On-ground destination expertise — making unfamiliar places feel effortless for guests.',
+    description: 'When events happen away from home — whether in Rajasthan, Goa, or abroad — we manage the complete destination layer. From vendor integration to local permits, from cultural experiences to city-wide guest logistics, we make the destination seamless.',
+    inclusions: [
+      'Destination assessment and planning',
+      'Local vendor network management',
+      'Permit and statutory compliance',
+      'Cultural experience and activity programming',
+      'City-wide guest movement management',
+      'Emergency and contingency protocols',
+      'Multi-venue destination coordination',
+    ],
+    icon: `<path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/>`,
+    viewBox: '0 0 24 24',
+  },
+];
+---
+
+<Layout
+  title="Services"
+  description="EventConnect+ provides end-to-end guest management services: Guest Communication, Hospitality, Logistics, Airport Operations, On-Ground Management, and Destination Management."
+>
+
+  <!-- ═══════════ HERO ══ -->
+  <section class="relative pt-40 pb-24 overflow-hidden bg-surface-950">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-[5%] left-[10%] w-[500px] h-[400px] rounded-full bg-brand-700 opacity-15 blur-[110px] animate-float-slow"></div>
+      <div class="absolute bottom-[0%] right-[0%] w-[400px] h-[400px] rounded-full bg-brand-500 opacity-10 blur-[90px] animate-float-med"></div>
+    </div>
+    <div class="container-inner relative z-10 text-center">
+      <p class="label-text mb-5 fade-in-section">What We Offer</p>
+      <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-medium text-white leading-[1.05] tracking-tight mb-6 fade-in-section fade-in-delay-1">
+        Complete Guest<br/><span class="text-gradient">Operations Suite</span>
+      </h1>
+      <p class="font-sans text-lg text-surface-400 leading-relaxed max-w-2xl mx-auto fade-in-section fade-in-delay-2">
+        Eight integrated services that collectively cover every dimension of the guest journey — from the first communication to the final departure.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════ SERVICES LIST ══ -->
+  <section class="bg-surface-950 pb-32">
+    <div class="container-inner">
+
+      <div class="space-y-5">
+        {services.map((service, i) => (
+          <div class={`card-glass rounded-2xl overflow-hidden group hover:border-brand-700/35 transition-all duration-400 fade-in-section`} style={`transition-delay:${Math.min(i*0.05, 0.3)}s`}>
+
+            <!-- Header (always visible) -->
+            <div class="p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+              <!-- Number + icon -->
+              <div class="lg:col-span-1 flex lg:flex-col items-center lg:items-start gap-4">
+                <span class="font-sans text-xs font-semibold text-surface-700 tracking-widest">{service.id}</span>
+                <div class="w-10 h-10 rounded-xl bg-brand-700/15 border border-brand-700/25 flex items-center justify-center group-hover:bg-brand-700/25 transition-colors duration-300">
+                  <svg width="18" height="18" viewBox={service.viewBox} fill="none" class="text-brand-400">
+                    <Fragment set:html={service.icon} />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Title + tagline -->
+              <div class="lg:col-span-4">
+                <h2 class="font-display text-2xl lg:text-3xl font-medium text-white mb-2">{service.title}</h2>
+                <p class="font-sans text-sm text-brand-400 italic">{service.tagline}</p>
+              </div>
+
+              <!-- Description -->
+              <div class="lg:col-span-4">
+                <p class="font-sans text-sm text-surface-500 leading-relaxed">{service.description}</p>
+              </div>
+
+              <!-- CTA arrow -->
+              <div class="lg:col-span-3 flex lg:justify-end items-start">
+                <a href="/contact" class="inline-flex items-center gap-2 font-sans text-xs font-semibold uppercase tracking-wider text-brand-400 hover:text-brand-300 transition-colors">
+                  Enquire
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Inclusions (expandable feel via grid) -->
+            <div class="border-t border-surface-800/50 px-8 lg:px-10 py-6 bg-surface-900/30">
+              <p class="font-sans text-xs uppercase tracking-widest text-surface-700 mb-4">Inclusions</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-2">
+                {service.inclusions.map(item => (
+                  <div class="flex items-center gap-2">
+                    <div class="w-1 h-1 rounded-full bg-brand-500 flex-shrink-0"></div>
+                    <span class="font-sans text-xs text-surface-500">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════ CTA ══ -->
+  <section class="section-padding bg-surface-900/40 border-t border-surface-800">
+    <div class="container-inner text-center">
+      <div class="max-w-2xl mx-auto fade-in-section">
+        <p class="label-text mb-5">Custom Scope</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-medium text-white mb-5">Need a Custom Scope?</h2>
+        <p class="font-sans text-surface-400 mb-10 leading-relaxed">
+          Every event is different. We build bespoke guest management scopes tailored to your event type, scale, and guest profile. Let's talk about what you need.
+        </p>
+        <a href="/contact" class="inline-flex items-center gap-2.5 px-8 py-4 bg-brand-gradient rounded-xl text-white font-sans font-semibold shadow-xl shadow-brand-700/30 hover:shadow-brand-500/50 hover:scale-105 transition-all duration-300">
+          Discuss Your Scope
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8h14M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
