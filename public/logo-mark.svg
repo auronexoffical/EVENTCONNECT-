@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 500" fill="none">
+  <defs>
+    <linearGradient id="lg" x1="44" y1="44" x2="536" y2="486" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9B00FF"/>
+      <stop offset="100%" stop-color="#5A0096"/>
+    </linearGradient>
+  </defs>
+  <!-- Arc ribbon: large C-shape opening lower-left -->
+  <path d="M 164 316 A 165 165 0 1 1 453 239"
+        stroke="url(#lg)" stroke-width="78" stroke-linecap="round" fill="none"/>
+  <!-- Pill / capsule -->
+  <rect x="44" y="410" width="492" height="76" rx="38" fill="url(#lg)"/>
+</svg>
